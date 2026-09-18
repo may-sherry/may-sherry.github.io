@@ -7,6 +7,9 @@ export default defineConfig({
   // 重点：主站霸占根域名，base 必须是 '/'（切记不要填 GrowthNote！）
   base: '/',
 
+  // 允许预设的未写完文章链接（死链）通过构建，方便后续逐步写文章填充
+  ignoreDeadLinks: true,
+
   themeConfig: {
     // 顶部导航栏
     nav: [
