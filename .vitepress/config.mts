@@ -23,7 +23,7 @@ export default defineConfig({
 
     // 社交外链
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/may-sherry' }
+      { icon: 'github', link: 'https://github.com/may-sherry/may-sherry.github.io' }
     ],
 
     footer: {
