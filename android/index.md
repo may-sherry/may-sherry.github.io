@@ -1,31 +1,23 @@
-﻿# 💻 Android 开发与架构实战
+# 💻 Android 开发与实战踩坑录
 
-> 记录现代 Android 开发进阶之路：拥抱 Kotlin 与 Jetpack Compose，追求流畅的 UI 交互与健壮的架构设计。
-
----
-
-## 🌟 核心理念与技术栈
-* **现代响应式 UI**：全面迁移并深入实践 **Jetpack Compose**，探索单向数据流（UDF）与状态提升。
-* **本地优先与数据持久化**：使用 **Room Database**，实现离线可用的本地存储、复杂关系查询与自定义排序流。
-* **分层与解耦**：遵循 Google 官方的 **MVVM + Repository 架构规范**，结合 Hilt / 依赖注入与 Kotlin Coroutines / Flow 异步处理。
-* **极致交互体验**：手势操作、九宫格图片响应式自适应、自研热力图与数据可视化组件。
+> 记录现代 Android 开发进阶之路：聚焦 Kotlin、Jetpack Compose、底层性能调优与真机调试技巧。面向真实工程落地，沉淀易懂耐读的技术经验。
 
 ---
 
-## 📌 精选实战与技术文章
+## 🛠️ 独立开发与高效调试专题
 
-### 1. Jetpack Compose 深度实践
-* [Jetpack Compose 状态恢复与页面跳转记忆](./compose-state)  
-  *解析为什么跳转二级页面后返回，原本选中的 Tab 和状态会丢失？深入理解 `rememberSaveable` 与 `BackHandler` 返回栈拦截机制。*
-* [自适应图片九宫格封装](./image-grid-overlay)  
-  *如何彻底抛弃写死 dp 的固定尺寸，利用 `weight(1f)` 与 `aspectRatio(1f)` 打造手机全端自适应的仿微信朋友圈 3 图排版与“+N”蒙层。*
+### 1. [如何利用 LocalSend 进行极致丝滑的 Android 真机调试](./localsend-debug)
+*针对真机没有数据线、微信传安装包被加 `.1` 后缀的痛点，详细介绍局域网免配环境的高速热传与真机部署技巧。*
 
-### 2. 数据库与业务流
-* [Room 数据库缓存与实时更新冲突解决](./room-cache-conflict)  
-  *复盘在“支持拖拽自定义排序”场景下，Room 数据库更新属性后内存缓存未及时刷新的 Bug 与优雅解法。*
+### 2. [电脑键盘输入法实时同步到 Android 模拟器实战指南](./emulator-keyboard-sync)
+*解决 Android Studio 模拟器中文输入受阻、中英切换繁琐的痛点，实现 PC 物理键盘输入法与手机模拟器的极速实时桥接映射。*
 
 ---
 
-## 📱 代表作品联动
-本板块的技术成果大部分直接落地应用于我的独立作品：
-👉 **[进入《成长小记 (GrowthNote)》官方网站](https://may-sherry.github.io/GrowthNote/)** 体验最新发布版本！
+## 🎨 架构与 Compose 深度实战
+
+### 3. [Jetpack Compose 状态恢复与生命周期避坑](./compose-state)
+*深入解析单向数据流（UDF）、`rememberSaveable` 的存储机制，以及多级页面返回时的状态丢失与重组陷阱。*
+
+### 4. [Room 数据库多条件响应式排序与缓存一致性](./room-custom-sort)
+*复盘在离线模式与可拖拽排序场景下，Room 与 Flow 联合使用时数据不刷新、脏读的经典 Bug 剖析与解法。*
